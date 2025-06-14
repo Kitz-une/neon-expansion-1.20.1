@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "nex",
+	"version": "${version}",
+	"name": "Neon Expansion",
+	"description": "A Special Version of Neon Blocks that also includes the custom items for Gun game 5!",
+	"authors": [
+		"Kitz_une","Memanoid","Zenkrack983"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/nex/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.kitz.NeonExpansion"
+		],
+		"client": [
+			"net.kitz.NeonExpansionClient"
+		]
+	},
+	"mixins": [
+		"nex.mixins.json",
+		{
+			"config": "nex.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
